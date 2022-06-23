@@ -53,7 +53,7 @@ while True:
                 r = r['eventos']
                 v = r[0]
 
-                Thread(target=send_message, args=(data,v['descricao'])).start()
+                Thread(target=send_message, args=(data,"product description" + v['descricao'])).start()
             else:
                 Thread(target=send_message, args=(data,'Código inválido, Por favor envie o código de rastreio novamente')).start()
         sleep(2)
